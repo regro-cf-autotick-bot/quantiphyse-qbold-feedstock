@@ -1,5 +1,5 @@
 {% set name = "quantiphyse-qbold" %}
-{% set version = "0.9.1" %}
+{% set version = "0.9.1.post4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/quantiphyse-qbold-{{ version }}.tar.gz
-  sha256: fd6183f7e6a7ee7895199e0c4344ef85fe9c7a6c696fc473b5c3752df77b02a5
+  sha256: 97220792ed5a2fc6da3466b22f88230e0e9b5bd4fd6109abf3eab673d32087e3
 
 build:
   number: 0
