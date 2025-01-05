@@ -6,24 +6,26 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/quantiphyse-qbold-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/quantiphyse-qbold-{{ version }}.tar.gz
   sha256: fd6183f7e6a7ee7895199e0c4344ef85fe9c7a6c696fc473b5c3752df77b02a5
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - numpy
-    - python >=3.6
+    - python >={{ python_min }}
     - quantiphyse-fabber
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - quantiphyse_qbold
 
